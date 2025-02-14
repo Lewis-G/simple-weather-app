@@ -49,9 +49,9 @@ const SearchBar = ({ suggestions, addCity, savedCities }: Props) => {
       />
 
       <ul>
-        {filteredSuggestions.map((suggestion, index) => {
+        {filteredSuggestions.map((suggestion) => {
           return (
-            <li key={index}>
+            <li key={suggestion}>
               <button
                 onClick={() => {
                   handleSelection(suggestion);

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { City } from "../types/interfaces";
 import { SearchBarSuggestion } from "../types/interfaces";
 import SearchBar from "../components/SearchBar";
-
+import CityCard from "../components/CityCard";
 import cityData from "../data/cities.json";
 
 function CityParentPage() {
@@ -30,12 +30,18 @@ function CityParentPage() {
 
   return (
     <div>
-      <h1>Saved Cities</h1>
+      <h1>Favourites</h1>
       <ul>
-        {savedCities.map((cityName, index) => {
+        {savedCities.map((cityName) => {
           return (
-            <li key={index}>
-              <button onClick={() => removeItem(cityName)}>{cityName}</button>
+            <li key={cityName}>
+              <CityCard
+                name={cityName}
+                onButtonPress={removeItem}
+                isFavourite={true}
+              />
+
+              {/* <button onClick={() => removeItem(cityName)}>{cityName}</button> */}
             </li>
           );
         })}

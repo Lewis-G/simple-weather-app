@@ -6,6 +6,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage";
 import CityParentPage from "./pages/CityListPage";
 import CityChildPage from "./pages/CityDetailPage";
+import NavBar from "../components/NavBar";
 
 const queryClient = new QueryClient();
 
